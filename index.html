@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-lang-key="metaTitle">Wallu - Trouvez ou devenez prestataire au Sénégal (ménage, livraison, électricité, plomberie...)</title>
-<meta name="description" data-lang-key="metaDescription" content="Wallu est l'application de services au Sénégal pour trouver ou devenir prestataire : ménage, aide à domicile, livraison, réparation, menuiserie, plomberie, électricité et plus.">
-<meta name="keywords" data-lang-key="metaKeywords" content="Wallu, application prestataire Sénégal, femme de ménage Dakar, livraison Thiès, électricien Sénégal, plombier Sénégal, services à domicile Sénégal">
+<title>Wallu - Trouvez ou devenez prestataire au Sénégal (ménage, livraison, électricité, plomberie...)</title>
+<meta name="description" content="Wallu est l'application de services au Sénégal pour trouver ou devenir prestataire : ménage, aide à domicile, livraison, réparation, menuiserie, plomberie, électricité et plus.">
+<meta name="keywords" content="Wallu, application prestataire Sénégal, femme de ménage Dakar, livraison Thiès, électricien Sénégal, plombier Sénégal, services à domicile Sénégal">
 <meta name="author" content="Wallu App">
 <meta name="robots" content="index, follow">
-<meta property="og:title" data-lang-key="ogTitle" content="Wallu - Services et prestataires au Sénégal">
-<meta property="og:description" data-lang-key="ogDescription" content="Trouvez ou devenez prestataire de services au Sénégal avec Wallu : ménage, livraison, réparation, plomberie, électricité, etc.">
+<meta property="og:title" content="Wallu - Services et prestataires au Sénégal">
+<meta property="og:description" content="Trouvez ou devenez prestataire de services au Sénégal avec Wallu : ménage, livraison, réparation, plomberie, électricité, etc.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wallu.app">
 <meta property="og:image" content="https://wallu.app/og-image.jpg">
@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlroq8NlQfX3aC+X9U/K4V9q/wL6k+zM/6B7vQ6p3p+f3z7+l2f9zFzL0HwA3eL7p+5oD4m+0hP9a3z+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
     :root {
@@ -33,7 +33,7 @@
         --color-text-light: #ffffff;
         --color-text-dark: var(--color-primary-blue);
         --color-text-medium: #666666;
-        --color-text-dark-contrast: #333333; /* For text on light background */
+        --color-text-dark-contrast: #333333;
 
         --font-primary: 'Inter', sans-serif; 
         
@@ -63,7 +63,7 @@
         line-height: 1.6;
         overflow-x: hidden;
         background: var(--color-bg-light);
-        color: var(--color-text-dark-contrast); /* Default text color */
+        color: var(--color-text-dark-contrast);
         -webkit-font-smoothing: antialiased; 
         -moz-osx-font-smoothing: grayscale;
     }
@@ -74,13 +74,12 @@
         padding: 0 calc(var(--spacing-unit) * 3); 
     }
 
-    /* --- Navigation Bar --- */
     .navbar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        background: var(--color-primary-blue); /* Solid background for visibility */
+        background: var(--color-primary-blue);
         box-shadow: var(--shadow-strong);
         z-index: 1000;
         padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
@@ -91,7 +90,7 @@
     }
 
     .navbar-logo {
-        height: 40px; /* Smaller logo for navigation */
+        height: 40px;
         width: auto;
         border-radius: var(--border-radius-sm);
         object-fit: contain;
@@ -102,17 +101,16 @@
         transform: scale(1.05);
     }
 
-    .nav-links-wrapper { /* New wrapper to control width of nav links */
+    .nav-links-wrapper {
         display: flex;
         align-items: center;
-        gap: calc(var(--spacing-unit) * 4); /* Gap between nav links and lang selector */
+        gap: calc(var(--spacing-unit) * 4);
     }
 
     .nav-links {
         display: flex;
         gap: calc(var(--spacing-unit) * 4);
         list-style: none;
-        /* Removed flex-grow to prevent taking full width */
     }
 
     .nav-links a {
@@ -123,7 +121,7 @@
         transition: color 0.3s ease, transform 0.3s ease;
         padding: var(--spacing-unit);
         border-radius: var(--border-radius-sm);
-        white-space: nowrap; /* Prevent text wrapping */
+        white-space: nowrap;
     }
 
     .nav-links a:hover {
@@ -133,13 +131,13 @@
     }
 
     .menu-toggle {
-        display: none; /* Hidden by default on larger screens */
+        display: none;
         background: none;
         border: none;
         font-size: 2rem;
         color: var(--color-primary-yellow);
         cursor: pointer;
-        z-index: 1001; /* Above nav links when open */
+        z-index: 1001;
     }
 
     .lang-selector {
@@ -175,8 +173,8 @@
         left: 0; 
         min-width: 120px; 
         text-align: center;
-        margin-top: var(--spacing-unit); /* Space below button */
-        z-index: 100; /* Ensure dropdown is above other content */
+        margin-top: var(--spacing-unit);
+        z-index: 100;
     }
 
     .lang-options a {
@@ -190,7 +188,6 @@
         background: rgba(255, 255, 255, 0.1);
     }
 
-    /* --- Hero Section --- */
     .hero {
         height: 100vh;
         min-height: 700px;
@@ -201,7 +198,7 @@
         position: relative;
         text-align: center;
         overflow: hidden;
-        padding-top: 80px; /* Space for fixed navbar */
+        padding-top: 80px;
     }
 
     .hero::before {
@@ -316,12 +313,12 @@
     .section {
         padding: calc(var(--spacing-unit) * 12) 0;
         background: var(--color-bg-light);
-        opacity: 0; /* For scroll animation */
-        transform: translateY(50px); /* For scroll animation */
+        opacity: 0;
+        transform: translateY(50px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     
-    .section.fade-in { /* Class added by JS for animation */
+    .section.fade-in {
         opacity: 1;
         transform: translateY(0);
     }
@@ -331,7 +328,7 @@
         color: var(--color-text-dark-contrast);
     }
 
-    .section:nth-of-type(even) { /* Changed to odd/even for alternating colors */
+    .section:nth-of-type(even) {
         background: var(--color-primary-blue);
         color: var(--color-text-light);
     }
@@ -472,24 +469,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 16px;
+        gap: calc(var(--spacing-unit) * 2);
         margin: calc(var(--spacing-unit) * 6) auto 0;
         width: 100%;
-        max-width: 900px;
+        max-width: 1000px;
         position: relative;
         padding: 0;
+        flex-wrap: wrap;
     }
     
     .phone-mockup-simple img {
-        width: calc(25% - 12px); 
+        width: calc(25% - 16px);
         border-radius: var(--border-radius-lg);
         box-shadow: var(--shadow-strong);
-        max-width: 180px;
+        max-width: 200px;
         height: auto;
         object-fit: contain;
+        flex-grow: 1;
+    }
+    
+    @media (min-width: 1000px) {
+        .phone-mockup-simple {
+            justify-content: space-around;
+        }
     }
 
-    /* --- Wallu in Numbers Section --- */
+
     .numbers-section {
         background: var(--color-bg-light); 
         padding: calc(var(--spacing-unit) * 10) 0;
@@ -535,7 +540,6 @@
         color: var(--color-primary-blue);
     }
 
-    /* --- FAQ Section --- */
     .faq-section {
         background: var(--color-bg-light);
         padding: calc(var(--spacing-unit) * 12) 0;
@@ -589,7 +593,7 @@
     }
 
     .faq-answer.open {
-        max-height: 200px; /* Adjust based on max content height */
+        max-height: 200px;
         padding: calc(var(--spacing-unit) * 3);
     }
 
@@ -664,12 +668,11 @@
         height: 30px;
     }
 
-    /* --- Footer Styles --- */
     footer {
         padding: calc(var(--spacing-unit) * 8) 0;
         background: var(--color-primary-blue);
-        color: var(--color-text-light); /* Default text color for footer sections */
-        text-align: left; /* Align sections to left */
+        color: var(--color-text-light);
+        text-align: left;
     }
 
     .footer-container {
@@ -677,12 +680,12 @@
         margin: 0 auto;
         padding: 0 calc(var(--spacing-unit) * 3);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: calc(var(--spacing-unit) * 4);
     }
 
     .footer-section {
-        margin-bottom: calc(var(--spacing-unit) * 2); /* Spacing between sections for mobile */
+        margin-bottom: calc(var(--spacing-unit) * 2);
     }
 
     .footer-section h3 {
@@ -693,29 +696,29 @@
     }
 
     .footer-section p, .footer-section a {
-        color: var(--color-text-light); /* Ensure text is light */
+        color: var(--color-text-light);
         line-height: 1.8;
         text-decoration: none;
         transition: color 0.3s ease;
-        display: flex; /* For inline icon and text */
+        display: flex;
         align-items: center;
         margin-bottom: calc(var(--spacing-unit) * 1);
     }
 
     .footer-section a:hover {
-        color: var(--color-primary-yellow); /* Hover effect for links */
+        color: var(--color-primary-yellow);
     }
 
     .footer-section p strong {
-        color: var(--color-primary-yellow); /* Bold text in footer */
+        color: var(--color-primary-yellow);
         margin-right: var(--spacing-unit);
     }
 
     .footer-section .icon {
         margin-right: calc(var(--spacing-unit) * 1.5);
-        color: var(--color-primary-yellow); /* Icons in yellow */
+        color: var(--color-primary-yellow);
         font-size: 1.1rem;
-        width: 20px; /* Fixed width for alignment */
+        width: 20px;
         text-align: center;
     }
 
@@ -732,7 +735,7 @@
         color: var(--color-text-light);
         text-decoration: none;
         transition: color 0.3s ease;
-        display: inline-block; /* Ensure padding/margin works horizontally */
+        display: inline-block;
     }
 
     .footer-nav-links a:hover {
@@ -753,7 +756,7 @@
 
     .social-links a:hover {
         transform: translateY(-3px) scale(1.1);
-        color: var(--color-text-light); /* Social icon hover effect */
+        color: var(--color-text-light);
     }
 
     .footer-bottom {
@@ -761,7 +764,7 @@
         padding-top: calc(var(--spacing-unit) * 4);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         margin-top: calc(var(--spacing-unit) * 4);
-        color: var(--color-text-light); /* Ensure copyright text is light */
+        color: var(--color-text-light);
     }
 
     @keyframes slideUp {
@@ -774,28 +777,26 @@
         50% { transform: rotate(180deg); }
     }
 
-    /* --- Responsive Adjustments (Updated for Menu & Lang Selector) --- */
     @media (max-width: 900px) {
         .navbar {
-            justify-content: space-between; /* Space between logo and menu toggle */
+            justify-content: space-between;
         }
         .nav-links-wrapper {
-            /* Hide on mobile, will be opened by menu-toggle */
             display: none; 
             flex-direction: column;
             width: 100%;
             background: var(--color-primary-blue);
             position: absolute;
-            top: 70px; /* Below navbar */
+            top: 70px;
             left: 0;
             padding: calc(var(--spacing-unit) * 2) 0;
             box-shadow: var(--shadow-strong);
-            transform: translateY(-100%); /* Start off-screen */
+            transform: translateY(-100%);
             transition: transform 0.3s ease-in-out;
-            align-items: center; /* Center links in mobile menu */
+            align-items: center;
         }
 
-        .nav-links-wrapper.open { /* Use this class to show the menu */
+        .nav-links-wrapper.open {
             display: flex; 
             transform: translateY(0);
         }
@@ -803,8 +804,8 @@
         .nav-links {
             flex-direction: column;
             width: 100%;
-            gap: calc(var(--spacing-unit) * 2); /* Smaller gap for mobile */
-            margin-bottom: calc(var(--spacing-unit) * 3); /* Space before lang selector */
+            gap: calc(var(--spacing-unit) * 2);
+            margin-bottom: calc(var(--spacing-unit) * 3);
         }
 
         .nav-links li {
@@ -812,51 +813,51 @@
         }
 
         .menu-toggle {
-            display: block; /* Show burger icon */
-            order: 2; /* Position it after the logo */
-            margin-left: auto; /* Push it to the right */
+            display: block;
+            order: 2;
+            margin-left: auto;
         }
         
         .navbar-logo {
-            order: 1; /* Keep logo on the left */
+            order: 1;
         }
 
         .lang-selector {
-            position: static; /* Position normally within the flow of the mobile menu */
-            margin-top: var(--spacing-unit); /* Space from last nav link */
+            position: static;
+            margin-top: var(--spacing-unit);
             width: auto;
         }
         
         .lang-selector button {
-            width: fit-content; /* Make button fit its content */
-            margin: 0 auto; /* Center the button */
+            width: fit-content;
+            margin: 0 auto;
         }
 
         .lang-options {
-            position: static; /* Position normally within the flow of the mobile menu */
+            position: static;
             margin-top: var(--spacing-unit);
             width: auto;
-            box-shadow: none; /* No shadow inside the menu */
-            border: none; /* No border inside the menu */
-            background: none; /* Transparent background */
+            box-shadow: none;
+            border: none;
+            background: none;
         }
         .lang-options a {
-            padding: 8px 0; /* Adjust padding for full width links */
+            padding: 8px 0;
         }
 
 
         .footer-container {
-            grid-template-columns: 1fr; /* Stack columns on smaller screens */
+            grid-template-columns: 1fr;
         }
 
         .footer-section {
-            text-align: center; /* Center text for stacked sections */
+            text-align: center;
         }
         .footer-section p, .footer-section a {
-            justify-content: center; /* Center content with icons */
+            justify-content: center;
         }
         .social-links {
-            justify-content: center; /* Center social links */
+            justify-content: center;
         }
     }
 
@@ -917,21 +918,21 @@
             
             <div class="nav-links-wrapper"> 
                 <ul class="nav-links">
-                    <li><a href="#top" data-lang-key="navHome">Accueil</a></li>
-                    <li><a href="#services" data-lang-key="navServices">Services</a></li>
-                    <li><a href="#how-it-works" data-lang-key="navHowItWorks">Comment ça marche</a></li>
-                    <li><a href="#screenshots" data-lang-key="navScreenshots">Captures d'écran</a></li>
-                    <li><a href="#faq" data-lang-key="navFAQ">FAQ</a></li>
-                    <li><a href="#download" data-lang-key="navDownload">Télécharger</a></li>
-                    <li><a href="#contact" data-lang-key="navContact">Contact</a></li>
+                    <li><a href="#top">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">Comment ça marche</a></li>
+                    <li><a href="#screenshots">Interface d'application</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#download">Télécharger</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="lang-selector">
-                    <button id="langToggle" aria-haspopup="true" aria-expanded="false" data-current-lang="fr">
-                        <span data-lang-key="currentLangDisplay">Français</span> <i class="fas fa-chevron-down"></i>
+                    <button id="langToggle" aria-haspopup="true" aria-expanded="false">
+                        <span>Français</span> <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-options" aria-labelledby="langToggle">
-                        <a href="#" data-lang="fr">Français</a>
-                        <a href="#" data-lang="en">English</a>
+                        <a href="#">Français</a>
+                        <a href="#">English</a>
                     </div>
                 </div>
             </div>
@@ -939,11 +940,11 @@
 
         <div class="hero-content">
             <img src="logo.png" alt="Logo Wallu, application de services au Sénégal" class="app-logo-hero" loading="eager">
-            <h1 data-lang-key="heroTitle">Wallu</h1>
-            <p data-lang-key="heroSubtitle">Connectez-vous aux meilleurs prestataires de services près de chez vous au Sénégal.</p>
+            <h1>Wallu</h1>
+            <p>Connectez-vous aux meilleurs prestataires de services près de chez vous au Sénégal.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary" data-lang-key="heroCtaPrimary">📱 Télécharger l'app</a>
-                <a href="#services" class="btn btn-secondary" data-lang-key="heroCtaSecondary">✨ Découvrir les services</a>
+                <a href="#" class="btn btn-primary">📱 Télécharger l'app</a>
+                <a href="#services" class="btn btn-secondary">✨ Découvrir les services</a>
             </div>
         </div>
     </header>
@@ -951,38 +952,68 @@
     <main>
         <section class="section" id="services">
             <div class="container">
-                <h2 class="section-title" data-lang-key="servicesTitle">Nos Services</h2>
-                <p class="section-subtitle" data-lang-key="servicesSubtitle">Trouvez le prestataire parfait pour tous vos besoins du quotidien, du ménage à la réparation.</p>
+                <h2 class="section-title">Nos Services</h2>
+                <p class="section-subtitle">Trouvez le prestataire parfait pour tous vos besoins du quotidien, du ménage à la réparation.</p>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
-                        <h3 data-lang-key="service1Title">Services Ménagers</h3>
-                        <p data-lang-key="service1Desc">Ménage, repassage, nettoyage... Des professionnels de confiance pour votre domicile.</p>
+                        <h3>Services Ménagers</h3>
+                        <p>Ménage, repassage, nettoyage... Des professionnels de confiance pour votre domicile.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
-                        <h3 data-lang-key="service2Title">Livraison</h3>
-                        <p data-lang-key="service2Desc">Livraison rapide et sécurisée de vos colis, courses et documents par des livreurs vérifiés.</p>
+                        <h3>Livraison</h3>
+                        <p>Livraison rapide et sécurisée de vos colis, courses et documents par des livreurs vérifiés.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
-                        <h3 data-lang-key="service3Title">Aide à Domicile</h3>
-                        <p data-lang-key="service3Desc">Assistance pour personnes âgées, garde d'enfants et accompagnement quotidien.</p>
+                        <h3>Aide à Domicile</h3>
+                        <p>Assistance pour personnes âgées, garde d'enfants et accompagnement quotidien.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
-                        <h3 data-lang-key="service4Title">Plomberie & Réparations</h3>
-                        <p data-lang-key="service4Desc">Dépannage, réparation de fuites, installation et maintenance par des artisans qualifiés.</p>
+                        <h3>Plomberie & Réparations</h3>
+                        <p>Dépannage, réparation de fuites, installation et maintenance par des artisans qualifiés.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 12H18l-2.5 5-2.5-10-2.5 5H2.5"></path></svg></div>
-                        <h3 data-lang-key="service5Title">Électricité</h3>
-                        <p data-lang-key="service5Desc">Installation électrique, dépannage, mise aux normes par des électriciens certifiés.</p>
+                        <h3>Électricité</h3>
+                        <p>Installation électrique, dépannage, mise aux normes par des électriciens certifiés.</p>
                     </div>
                     <div class="service-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 16.2A4.5 4.5 0 0 0 15.8 20a4.5 4.5 0 0 0-4.2-3.8c-2.4 0-4.2 1.7-4.2 3.8a4.5 4.5 0 0 0 4.2 3.8A4.5 4.5 0 0 0 15.8 20c.3 0 .5 0 .8-.1"></path><path d="M10 12a3 3 0 0 0 3-3V3a3 3 0 0 0-3 3v6Z"></path><path d="M10 9a3 3 0 0 1 3-3v1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2v1a3 3 0 0 1-3-3Z"></path><path d="M14 9a3 3 0 0 0 3-3v1a2 2 0 0 1-2 2v2a2 2 0 0 1 2 2v1a3 3 0 0 0-3-3Z"></path></svg></div>
-                        <h3 data-lang-key="service6Title">Artisanat</h3>
-                        <p data-lang-key="service6Desc">Menuiserie, peinture, et autres travaux manuels par des artisans talentueux.</p>
+                        <h3>Artisanat</h3>
+                        <p>Menuiserie, peinture, et autres travaux manuels par des artisans talentueux.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-hammer"></i></div>
+                        <h3>Habitat et Entretien</h3>
+                        <p>Réparations domestiques, peinture, carrelage, et nettoyage pour un intérieur impeccable.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Service à la Personne</h3>
+                        <p>Ménage, repassage, aide aux courses, et gardes d'enfants pour vous libérer du temps.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-truck-moving"></i></div>
+                        <h3>Livraison et Taxi Bagages</h3>
+                        <p>Livraison express de colis, transport de bagages, déménagement léger et taxi pour effets personnels.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Location de Matériel</h3>
+                        <p>Location de véhicules utilitaires, outils de bricolage, matériel de jardinage, et équipement de nettoyage.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Bien-être et Santé</h3>
+                        <p>Médecin d'urgences, coaching sportif, accompagnement psychologique, et massages relaxants.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-car-alt"></i></div>
+                        <h3>Mobilité et Transport</h3>
+                        <p>Réparation, dépannage, remorque et entretien de véhicules, ainsi que des services de Taxi et VTC.</p>
                     </div>
                 </div>
             </div>
@@ -990,23 +1021,23 @@
 
         <section class="section" id="how-it-works">
             <div class="container">
-                <h2 class="section-title" data-lang-key="howItWorksTitle">Comment ça marche ?</h2>
-                <p class="section-subtitle" data-lang-key="howItWorksSubtitle">En trois étapes simples, trouvez le professionnel qu'il vous faut.</p>
+                <h2 class="section-title">Comment ça marche ?</h2>
+                <p class="section-subtitle">En trois étapes simples, trouvez le professionnel qu'il vous faut.</p>
                 <div class="steps-grid">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3 data-lang-key="step1Title">Choisissez votre service</h3>
-                        <p data-lang-key="step1Desc">Sélectionnez la prestation dont vous avez besoin parmi notre large gamme de services.</p>
+                        <h3>Choisissez votre service</h3>
+                        <p>Sélectionnez la prestation dont vous avez besoin parmi notre large gamme de services.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3 data-lang-key="step2Title">Trouvez votre prestataire</h3>
-                        <p data-lang-key="step2Desc">Parcourez les profils qualifiés près de chez vous et consultez les.</p>
+                        <h3>Trouvez votre prestataire</h3>
+                        <p>Parcourez les profils qualifiés près de chez vous et consultez les.</p>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3 data-lang-key="step3Title">Réservez et c'est fait !</h3>
-                        <p data-lang-key="step3Desc">Contactez, négociez et planifiez votre intervention sans frais supplémentaires.</p>
+                        <h3>Réservez et c'est fait !</h3>
+                        <p>Contactez, négociez et planifiez votre intervention sans frais supplémentaires.</p>
                     </div>
                 </div>
             </div>
@@ -1014,8 +1045,8 @@
 
         <section class="section" id="screenshots">
             <div class="container">
-                <h2 class="section-title" data-lang-key="screenshotsTitle">Une Interface Simple</h2>
-                <p class="section-subtitle" data-lang-key="screenshotsSubtitle">Nous avons conçu Wallu pour que trouver un prestataire de service avec simplicité.</p>
+                <h2 class="section-title">Interface d'application</h2>
+                <p class="section-subtitle">Nous avons conçu Wallu pour que trouver un prestataire de service avec simplicité.</p>
                 <div class="phone-mockup-simple">
                     <img src="a.jpg" alt="Capture d'écran de l'accueil de l'application Wallu" loading="lazy">
                     <img src="b.jpg" alt="Capture d'écran de la liste des services disponibles sur Wallu" loading="lazy">
@@ -1027,20 +1058,20 @@
 
         <section class="numbers-section">
             <div class="container">
-                <h2 class="section-title" data-lang-key="numbersTitle">Wallu en Chiffres</h2>
-                <p class="section-subtitle" data-lang-key="numbersSubtitle">Rejoignez une communauté grandissante de confiance au Sénégal.</p>
+                <h2 class="section-title">Wallu en Chiffres</h2>
+                <p class="section-subtitle">Rejoignez une communauté grandissante de confiance au Sénégal.</p>
                 <div class="numbers-grid">
                     <div class="number-card">
-                        <div class="value" data-lang-key="usersValue">15 000+</div>
-                        <div class="label" data-lang-key="usersLabel">Utilisateurs au Sénégal</div>
+                        <div class="value">15 000+</div>
+                        <div class="label">Utilisateurs au Sénégal</div>
                     </div>
                     <div class="number-card">
-                        <div class="value" data-lang-key="ratingValue">4.9/5 ⭐</div>
-                        <div class="label" data-lang-key="ratingLabel">Note Google Play</div>
+                        <div class="value">4.9/5 ⭐</div>
+                        <div class="label">Note Google Play</div>
                     </div>
                     <div class="number-card">
-                        <div class="value" data-lang-key="providersValue">100+</div>
-                        <div class="label" data-lang-key="providersLabel">Prestataires actifs</div>
+                        <div class="value">100+</div>
+                        <div class="label">Prestataires actifs</div>
                     </div>
                 </div>
             </div>
@@ -1048,39 +1079,39 @@
 
         <section class="section faq-section" id="faq">
             <div class="container">
-                <h2 class="section-title" data-lang-key="faqTitle">Questions Fréquentes</h2>
-                <p class="section-subtitle" data-lang-key="faqSubtitle">Nous répondons à vos interrogations les plus courantes sur Wallu.</p>
+                <h2 class="section-title">Questions Fréquentes</h2>
+                <p class="section-subtitle">Nous répondons à vos interrogations les plus courantes sur Wallu.</p>
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span data-lang-key="faqQ1">Comment trouver un prestataire sur Wallu ?</span> <i class="fas fa-chevron-down"></i>
+                            <span>Comment trouver un prestataire sur Wallu ?</span> <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p data-lang-key="faqA1">Après avoir téléchargé l'application, sélectionnez le service dont vous avez besoin, puis parcourez les profils des prestataires disponibles près de chez vous. Vous pouvez filtrer par note, prix ou disponibilité.</p>
+                            <p>Après avoir téléchargé l'application, sélectionnez vous verrez les desvices disponibles et dont vous avez besoin, puis parcourez les profils des prestataires disponibles près de chez vous.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span data-lang-key="faqQ2">Est-ce que l'inscription en tant que prestataire est gratuite ?</span> <i class="fas fa-chevron-down"></i>
+                            <span>Est-ce que l'inscription en tant que prestataire est gratuite ?</span> <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p data-lang-key="faqA2">Oui, l'inscription et la création de votre profil prestataire sur Wallu sont entièrement gratuites. Nous prélevons une petite commission uniquement sur les services réalisés.</p>
+                            <p>Oui, l'inscription et la création de votre profil prestataire sur Wallu sont entièrement gratuites. Nous prélevons une petite commission uniquement sur les services réalisés.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span data-lang-key="faqQ3">Comment la sécurité des paiements est-elle garantie ?</span> <i class="fas fa-chevron-down"></i>
+                            <span>Comment la sécurité des paiements est-elle garantie ?</span> <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p data-lang-key="faqA3">Wallu utilise des systèmes de paiement sécurisés et cryptés. Vos informations bancaires sont protégées, et les paiements sont traités via des partenaires fiables.</p>
+                            <p>Wallu utilise des systèmes de paiement sécurisés et cryptés. Vos informations bancaires sont protégées, et les paiements sont traités via des partenaires fiables.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span data-lang-key="faqQ4">Que faire en cas de problème avec un service ?</span> <i class="fas fa-chevron-down"></i>
+                            <span>Que faire en cas de problème avec un service ?</span> <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p data-lang-key="faqA4">Notre équipe de support est disponible de 8h00 à 00h00, 7j/7. Vous pouvez nous contacter via le chat en direct dans l'application, par e-mail ou par téléphone. Nous vous aiderons à résoudre tout problème rapidement.</p>
+                            <p>Notre équipe de support est disponible de 8h00 à 00h00, 7j/7. Vous pouvez nous contacter via le chat en direct dans l'application, par e-mail ou par téléphone. Nous vous aiderons à résoudre tout problème rapidement.</p>
                         </div>
                     </div>
                 </div>
@@ -1089,21 +1120,21 @@
 
         <section class="download" id="download">
             <div class="container">
-                <h2 data-lang-key="downloadTitle">Prêt à simplifier votre quotidien au Sénégal ?</h2>
-                <p data-lang-key="downloadSubtitle">Téléchargez Wallu maintenant et connectez-vous aux meilleurs services à portée de main.</p>
+                <h2>Prêt à simplifier votre quotidien au Sénégal ?</h2>
+                <p>Téléchargez Wallu maintenant et connectez-vous aux meilleurs services à portée de main.</p>
                 <div class="download-buttons">
                     <a href="#" class="store-button" aria-label="Télécharger sur l'App Store">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                         <div>
-                            <div style="font-size: 0.8rem;" data-lang-key="downloadAppStoreText">Télécharger sur</div>
-                            <div style="font-weight: bold;" data-lang-key="downloadAppStoreName">App Store</div>
+                            <div style="font-size: 0.8rem;">Télécharger sur</div>
+                            <div style="font-weight: bold;">App Store</div>
                         </div>
                     </a>
                     <a href="#" class="store-button" aria-label="Disponible sur Google Play">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
                         <div>
-                            <div style="font-size: 0.8rem;" data-lang-key="downloadGooglePlayText">Disponible sur</div>
-                            <div style="font-weight: bold;" data-lang-key="downloadGooglePlayName">Google Play</div>
+                            <div style="font-size: 0.8rem;">Disponible sur</div>
+                            <div style="font-weight: bold;">Google Play</div>
                         </div>
                     </a>
                 </div>
@@ -1114,27 +1145,33 @@
     <footer id="contact">
         <div class="footer-container">
             <div class="footer-section">
-                <h3 data-lang-key="footerAboutTitle">À Propos de Wallu</h3>
-                <p data-lang-key="footerAboutDesc">Wallu est votre plateforme de confiance pour trouver des prestataires de services qualifiés au Sénégal, facilitant votre quotidien avec rapidité et sécurité.</p>
+                <h3>À Propos de Wallu</h3>
+                <p>Wallu est votre plateforme de confiance pour trouver des prestataires de services qualifiés au Sénégal, facilitant votre quotidien avec rapidité et sécurité.</p>
             </div>
             <div class="footer-section">
-                <h3 data-lang-key="footerServicesTitle">Nos Services</h3>
+                <h3>Nos Services</h3>
                 <ul class="footer-nav-links">
-                    <li><a href="#services" data-lang-key="service1Title">Services Ménagers</a></li>
-                    <li><a href="#services" data-lang-key="service2Title">Livraison</a></li>
-                    <li><a href="#services" data-lang-key="service4Title">Plomberie & Réparations</a></li>
-                    <li><a href="#services" data-lang-key="service5Title">Électricité</a></li>
-                    <li><a href="#services" data-lang-key="service6Title">Artisanat</a></li>
+                    <li><a href="#services">Services Ménagers</a></li>
+                    <li><a href="#services">Livraison</a></li>
+                    <li><a href="#services">Plomberie & Réparations</a></li>
+                    <li><a href="#services">Électricité</a></li>
+                    <li><a href="#services">Artisanat</a></li>
+                    <li><a href="#services">Habitat et Entretien</a></li>
+                    <li><a href="#services">Service à la Personne</a></li>
+                    <li><a href="#services">Livraison et Taxi Bagages</a></li>
+                    <li><a href="#services">Location de Matériel</a></li>
+                    <li><a href="#services">Bien-être et Santé</a></li>
+                    <li><a href="#services">Mobilité et Transport</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3 data-lang-key="footerSupportTitle">Support</h3>
-                <p data-lang-key="supportHours"><span class="icon"><i class="far fa-clock"></i></span> Assistance : 8h00 à 00h00, 7j/7</p>
-                <p data-lang-key="supportOnline"><span class="icon"><i class="far fa-comments"></i></span> Chat en direct disponible dans l'application.</p>
-                <a href="mailto:support@wallu.app" data-lang-key="supportEmail"><span class="icon"><i class="fas fa-envelope"></i></span> support@wallu.app</a>
+                <h3>Support</h3>
+                <p><span class="icon"><i class="far fa-clock"></i></span> Assistance : 8h00 à 00h00, 7j/7</p>
+                <p><span class="icon"><i class="far fa-comments"></i></span> Chat en direct disponible dans l'application.</p>
+                <a href="mailto:support@wallu.app"><span class="icon"><i class="fas fa-envelope"></i></span> support@wallu.app</a>
             </div>
             <div class="footer-section">
-                <h3 data-lang-key="footerContactTitle">Contact</h3>
+                <h3>Contact</h3>
                 <a href="mailto:assane.sow.wallu.service@gmail.com"><span class="icon"><i class="fas fa-envelope"></i></span> assane.sow.wallu.service@gmail.com</a>
                 <a href="mailto:momardiop091@gmail.com"><span class="icon"><i class="fas fa-envelope"></i></span> momardiop091@gmail.com</a>
                 <a href="tel:+221774682474"><span class="icon"><i class="fas fa-phone-alt"></i></span> +221 77 468 24 74</a>
@@ -1148,245 +1185,34 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p data-lang-key="footerCopyright">&copy; 2025 Wallu. Tous droits réservés.</p>
-            </div>
+            <p>&copy; 2025 Wallu. Tous droits réservés.</p>
+        </div>
     </footer>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const menuToggle = document.querySelector('.menu-toggle');
-        // Now targeting the wrapper that holds both nav links and lang selector
         const navLinksWrapper = document.querySelector('.nav-links-wrapper'); 
         const sections = document.querySelectorAll('.section, .numbers-section, .faq-section');
 
-        // Toggle mobile menu
         menuToggle.addEventListener('click', () => {
             navLinksWrapper.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', navLinksWrapper.classList.contains('open'));
         });
 
-        // Close mobile menu when a link is clicked
-        navLinksWrapper.querySelectorAll('.nav-links a').forEach(link => { // Target links inside .nav-links
+        navLinksWrapper.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinksWrapper.classList.remove('open');
                 menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Language selector toggle
-        const langToggleBtn = document.getElementById('langToggle');
-        const langOptions = document.querySelector('.lang-options');
-        const currentLangDisplay = langToggleBtn.querySelector('[data-lang-key="currentLangDisplay"]');
+        // Suppression de la logique de sélection de langue
+        // const langToggleBtn = document.getElementById('langToggle');
+        // const langOptions = document.querySelector('.lang-options');
+        // const currentLangDisplay = langToggleBtn.querySelector('[data-lang-key="currentLangDisplay"]');
+        // ... (tout le code de traduction est supprimé ici)
 
-        const translations = {
-            fr: {
-                metaTitle: "Wallu - Trouvez ou devenez prestataire au Sénégal (ménage, livraison, électricité, plomberie...)",
-                metaDescription: "Wallu est l'application de services au Sénégal pour trouver ou devenir prestataire : ménage, aide à domicile, livraison, réparation, menuiserie, plomberie, électricité et plus.",
-                metaKeywords: "Wallu, application prestataire Sénégal, femme de ménage Dakar, livraison Thiès, électricien Sénégal, plombier Sénégal, services à domicile Sénégal",
-                ogTitle: "Wallu - Services et prestataires au Sénégal",
-                ogDescription: "Trouvez ou devenez prestataire de services au Sénégal avec Wallu : ménage, livraison, réparation, plomberie, électricité, etc.",
-                currentLangDisplay: "Français",
-                navHome: "Accueil",
-                navServices: "Services",
-                navHowItWorks: "Comment ça marche",
-                navScreenshots: "Captures d'écran",
-                navFAQ: "FAQ",
-                navDownload: "Télécharger",
-                navContact: "Contact",
-                heroTitle: "Wallu",
-                heroSubtitle: "Connectez-vous aux meilleurs prestataires de services près de chez vous au Sénégal.",
-                heroCtaPrimary: "📱 Télécharger l'app",
-                heroCtaSecondary: "✨ Découvrir les services",
-                servicesTitle: "Nos Services",
-                servicesSubtitle: "Trouvez le prestataire parfait pour tous vos besoins du quotidien, du ménage à la réparation.",
-                service1Title: "Services Ménagers",
-                service1Desc: "Ménage, repassage, nettoyage... Des professionnels de confiance pour votre domicile.",
-                service2Title: "Livraison",
-                service2Desc: "Livraison rapide et sécurisée de vos colis, courses et documents par des livreurs vérifiés.",
-                service3Title: "Aide à Domicile",
-                service3Desc: "Assistance pour personnes âgées, garde d'enfants et accompagnement quotidien.",
-                service4Title: "Plomberie & Réparations",
-                service4Desc: "Dépannage, réparation de fuites, installation et maintenance par des artisans qualifiés.",
-                service5Title: "Électricité",
-                service5Desc: "Installation électrique, dépannage, mise aux normes par des électriciens certifiés.",
-                service6Title: "Artisanat",
-                service6Desc: "Menuiserie, peinture, et autres travaux manuels par des artisans talentueux.",
-                howItWorksTitle: "Comment ça marche ?",
-                howItWorksSubtitle: "En trois étapes simples, trouvez le professionnel qu'il vous faut.",
-                step1Title: "Choisissez votre service",
-                step1Desc: "Sélectionnez la prestation dont vous avez besoin parmi notre large gamme de services.",
-                step2Title: "Trouvez votre prestataire",
-                step2Desc: "Parcourez les profils qualifiés près de chez vous et consultez les.",
-                step3Title: "Réservez et c'est fait !",
-                step3Desc: "Contactez, négociez et planifiez votre intervention sans frais supplémentaires.",
-                screenshotsTitle: "Une Interface Simple",
-                screenshotsSubtitle: "Nous avons conçu Wallu pour que trouver un prestataire de service avec simplicité.",
-                numbersTitle: "Wallu en Chiffres",
-                numbersSubtitle: "Rejoignez une communauté grandissante de confiance au Sénégal.",
-                usersValue: "15 000+",
-                usersLabel: "Utilisateurs au Sénégal",
-                ratingValue: "4.9/5 ⭐",
-                ratingLabel: "Note Google Play",
-                providersValue: "100+",
-                providersLabel: "Prestataires actifs",
-                faqTitle: "Questions Fréquentes",
-                faqSubtitle: "Nous répondons à vos interrogations les plus courantes sur Wallu.",
-                faqQ1: "Comment trouver un prestataire sur Wallu ?",
-                faqA1: "Après avoir téléchargé l'application, sélectionnez le service dont vous avez besoin, puis parcourez les profils des prestataires disponibles près de chez vous. Vous pouvez filtrer par note, prix ou disponibilité.",
-                faqQ2: "Est-ce que l'inscription en tant que prestataire est gratuite ?",
-                faqA2: "Oui, l'inscription et la création de votre profil prestataire sur Wallu sont entièrement gratuites. Nous prélevons une petite commission uniquement sur les services réalisés.",
-                faqQ3: "Comment la sécurité des paiements est-elle garantie ?",
-                faqA3: "Wallu utilise des systèmes de paiement sécurisés et cryptés. Vos informations bancaires sont protégées, et les paiements sont traités via des partenaires fiables.",
-                faqQ4: "Que faire en cas de problème avec un service ?",
-                faqA4: "Notre équipe de support est disponible de 8h00 à 00h00, 7j/7. Vous pouvez nous contacter via le chat en direct dans l'application, par e-mail ou par téléphone. Nous vous aiderons à résoudre tout problème rapidement.",
-                downloadTitle: "Prêt à simplifier votre quotidien au Sénégal ?",
-                downloadSubtitle: "Téléchargez Wallu maintenant et connectez-vous aux meilleurs services à portée de main.",
-                downloadAppStoreText: "Télécharger sur",
-                downloadAppStoreName: "App Store",
-                downloadGooglePlayText: "Disponible sur",
-                downloadGooglePlayName: "Google Play",
-                footerCopyright: "&copy; 2025 Wallu. Tous droits réservés.",
-                footerAboutTitle: "À Propos de Wallu",
-                footerAboutDesc: "Wallu est votre plateforme de confiance pour trouver des prestataires de services qualifiés au Sénégal, facilitant votre quotidien avec rapidité et sécurité.",
-                footerServicesTitle: "Nos Services",
-                footerSupportTitle: "Support",
-                supportHours: "Assistance : 8h00 à 00h00, 7j/7",
-                supportOnline: "Chat en direct disponible dans l'application.",
-                supportEmail: "support@wallu.app",
-                footerContactTitle: "Contact",
-                // footerPolicyText: "Politique de confidentialité", // Supprimé
-                // footerTermsText: "Conditions d'utilisation" // Supprimé
-            },
-            en: {
-                metaTitle: "Wallu - Find or become a service provider in Senegal (cleaning, delivery, electricity, plumbing...)",
-                metaDescription: "Wallu is the service application in Senegal to find or become a service provider: cleaning, home care, delivery, repair, carpentry, plumbing, electricity, and more.",
-                metaKeywords: "Wallu, service app Senegal, house cleaner Dakar, delivery Thies, electrician Senegal, plumber Senegal, home services Senegal",
-                ogTitle: "Wallu - Services and providers in Senegal",
-                ogDescription: "Find or become a service provider in Senegal with Wallu: cleaning, delivery, repair, plumbing, electricity, etc.",
-                currentLangDisplay: "English",
-                navHome: "Home",
-                navServices: "Services",
-                navHowItWorks: "How it works",
-                navScreenshots: "Screenshots",
-                navFAQ: "FAQ",
-                navDownload: "Download",
-                navContact: "Contact",
-                heroTitle: "Wallu",
-                heroSubtitle: "Connect with the best service providers near you in Senegal.",
-                heroCtaPrimary: "📱 Download the App",
-                heroCtaSecondary: "✨ Discover Services",
-                servicesTitle: "Our Services",
-                servicesSubtitle: "Find the perfect provider for all your daily needs, from cleaning to repairs.",
-                service1Title: "Cleaning Services",
-                service1Desc: "Cleaning, ironing, house cleaning... Trustworthy professionals for your home.",
-                service2Title: "Delivery",
-                service2Desc: "Fast and secure delivery of your packages, groceries, and documents by verified drivers.",
-                service3Title: "Home Care",
-                service3Desc: "Assistance for the elderly, childcare, and daily support.",
-                service4Title: "Plumbing & Repairs",
-                service4Desc: "Troubleshooting, leak repair, installation, and maintenance by qualified artisans.",
-                service5Title: "Electricity",
-                service5Desc: "Electrical installation, troubleshooting, and compliance by certified electricians.",
-                service6Title: "Craftsmanship",
-                service6Desc: "Carpentry, painting, and other manual work by talented artisans.",
-                howItWorksTitle: "How it works?",
-                howItWorksSubtitle: "In three simple steps, find the professional you need.",
-                step1Title: "Choose your service",
-                step1Desc: "Select the service you need from our wide range of services.",
-                step2Title: "Find your provider",
-                step2Desc: "Browse qualified profiles near you and consult them.",
-                step3Title: "Book and it's done!",
-                step3Desc: "Contact, negotiate, and schedule your service without additional fees.",
-                screenshotsTitle: "A Simple Interface",
-                screenshotsSubtitle: "We designed Wallu to make finding a service provider simple.",
-                numbersTitle: "Wallu in Numbers",
-                numbersSubtitle: "Join a growing community of trust in Senegal.",
-                usersValue: "15,000+",
-                usersLabel: "Users in Senegal",
-                ratingValue: "4.9/5 ⭐",
-                ratingLabel: "Google Play Rating",
-                providersValue: "100+",
-                providersLabel: "Active Providers",
-                faqTitle: "Frequently Asked Questions",
-                faqSubtitle: "We answer your most common questions about Wallu.",
-                faqQ1: "How to find a provider on Wallu?",
-                faqA1: "After downloading the app, select the service you need, then browse the profiles of available providers near you. You can filter by rating, price, or availability.",
-                faqQ2: "Is registering as a provider free?",
-                faqA2: "Yes, registration and creation of your provider profile on Wallu are completely free. We only charge a small commission on completed services.",
-                faqQ3: "How is payment security guaranteed?",
-                faqA3: "Wallu uses secure and encrypted payment systems. Your banking information is protected, and payments are processed via reliable partners.",
-                faqQ4: "What to do if there's a problem with a service?",
-                faqA4: "Our support team is available from 8 AM to 12 AM, 7 days a week. You can contact us via live chat in the app, by email, or by phone. We will help you resolve any issue quickly.",
-                downloadTitle: "Ready to simplify your daily life in Senegal?",
-                downloadSubtitle: "Download Wallu now and connect to the best services at your fingertips.",
-                downloadAppStoreText: "Download on the",
-                downloadAppStoreName: "App Store",
-                downloadGooglePlayText: "Available on",
-                downloadGooglePlayName: "Google Play",
-                footerCopyright: "&copy; 2025 Wallu. All rights reserved.",
-                footerAboutTitle: "About Wallu",
-                footerAboutDesc: "Wallu is your trusted platform to find qualified service providers in Senegal, simplifying your daily life with speed and security.",
-                footerServicesTitle: "Our Services",
-                footerSupportTitle: "Support",
-                supportHours: "Support: 8:00 AM to 12:00 AM, 7 days a week",
-                supportOnline: "Live chat available in the app.",
-                supportEmail: "support@wallu.app",
-                footerContactTitle: "Contact",
-                // footerPolicyText: "Privacy Policy", // Supprimé
-                // footerTermsText: "Terms of Use" // Supprimé
-            }
-        };
-
-        let currentLang = 'fr'; // Default language
-
-        function applyTranslation() {
-            document.querySelectorAll('[data-lang-key]').forEach(element => {
-                const key = element.getAttribute('data-lang-key');
-                if (translations[currentLang] && translations[currentLang][key]) {
-                    if (element.tagName === 'TITLE' || (element.tagName === 'META' && element.hasAttribute('name'))) {
-                        element.setAttribute('content', translations[currentLang][key]);
-                    } else if (element.tagName === 'META' && element.hasAttribute('property')) {
-                        element.setAttribute('content', translations[currentLang][key]);
-                    } else {
-                        element.innerHTML = translations[currentLang][key];
-                    }
-                }
-            });
-            currentLangDisplay.textContent = translations[currentLang].currentLangDisplay;
-            langToggleBtn.setAttribute('data-current-lang', currentLang);
-            document.documentElement.lang = currentLang;
-        }
-
-        if (langToggleBtn && langOptions) {
-            langToggleBtn.addEventListener('click', () => {
-                const isExpanded = langToggleBtn.getAttribute('aria-expanded') === 'true';
-                langToggleBtn.setAttribute('aria-expanded', !isExpanded);
-                // In mobile, we just toggle the 'open' class on lang-options to show/hide
-                langOptions.style.display = isExpanded ? 'none' : 'block'; // Directly control display for simplicity in mobile menu
-            });
-
-            langOptions.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    currentLang = event.target.getAttribute('data-lang');
-                    applyTranslation();
-                    langOptions.style.display = 'none'; // Hide options after selection
-                    langToggleBtn.setAttribute('aria-expanded', 'false');
-                });
-            });
-
-            document.addEventListener('click', (event) => {
-                // Ensure click outside also closes the language dropdown for desktop
-                if (!langToggleBtn.contains(event.target) && !langOptions.contains(event.target) && window.innerWidth > 900) {
-                    langOptions.style.display = 'none';
-                    langToggleBtn.setAttribute('aria-expanded', 'false');
-                }
-            });
-        }
-        
-        applyTranslation();
-
-        // Simple scroll animation (fade-in/slide-up)
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -1406,7 +1232,6 @@
             observer.observe(section);
         });
 
-        // FAQ accordion functionality
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
